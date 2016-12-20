@@ -1,0 +1,53 @@
+2 1
+7 8
+#######
+# s   #
+# #####
+#   #G#
+# ### #
+# ### #
+#     #
+#######
+
+プレイヤーの初期位置、迷路のサイズの保存方法は１次元配列
+迷路情報の保存は２次元配列
+同じ書式で記載された他迷路を引数で受け取る
+アクセサは複数クラスを使用しカプセル化した場合に必要となる
+壁当たり判定やゴールの判定が必要
+
+クラス名:maze
+フィールド変数:
+
+
+int[] location_player（プレイヤーの現在地)
+int[] goal(ゴール地点）
+int[] size_maze(迷路のサイズ)
+String[] map(迷路のマップ)
+
+コンストラクタ:
+maze(map,location_player,goal)
+this.location_player = location_player
+this.map = map
+this.goal = goal
+
+メソッド:
+boolian wall(壁の当たり判定)
+    int map
+boolian clear(ゴール判定)
+    int goal,location_player
+
+（移動）
+public int move(location_player)
+if (wall == true)
+migi = location_player[0] + 1
+hidari = location_player[0] - 1
+ue = location_player[1] - 1
+sita = location_player[1] + 1
+
+（歩数測定）
+private int count
+this.count = 0
+if (wall == false && [migi||hidari||ue||sita])
+    count ++
+
+アクセサは必要（ゲッターはlocation_playerとcount)
