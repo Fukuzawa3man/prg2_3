@@ -15,7 +15,6 @@ public class main {
             File file = new File("/Users/e165711/IdeaProjects/prg2_3/src/Main/map.txt");
             BufferedReader Map = new BufferedReader(new FileReader(file));
             String map;
-            int i = 0;
             while((map = Map.readLine()) != null){
                 System.out.println(map);
             }
